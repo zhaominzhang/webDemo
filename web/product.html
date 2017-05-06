@@ -84,6 +84,9 @@
     </footer>
 </body>
 <script>
+window.onload=function(){
+
+
     var fdj = document.getElementById("fdj");  // 获得最大的盒子
     var small = fdj.children[0];  // 获得small 小图片 350盒子
     var big = fdj.children[1];  // 获得 大图片 800 盒子
@@ -130,5 +133,6 @@
          bigImage.style.top =  -y *  big.offsetHeight /small.offsetHeight + "px";
 
     }
+}
 </script>
 </html>

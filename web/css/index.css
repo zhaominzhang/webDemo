@@ -1,9 +1,9 @@
-
+﻿
 body{width: 100%;height: 100%;background-color: #eee;}
 *{margin:0;padding:0;}
 ul li,ol li{list-style: none;}
 header{
-    width: 100%;
+    width: 1350px;
     height: 90px;
     position: relative;
 }
@@ -71,7 +71,7 @@ header{
     border-color:#FF6060;
 }
 .nav{
-    width: 100%;
+    width: 1350px;
     height: 60px;
     display: flex;
     background-color: #E1E1E1;
@@ -136,7 +136,7 @@ header{
     right:5px;
 }
 .list{
-    width: 100%;
+    width: 1350px;
     display: flex;
 }
 .list div{

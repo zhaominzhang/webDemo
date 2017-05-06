@@ -1,0 +1,128 @@
+    .content{
+        width: 1340px;
+        height: 500px;
+        padding: 0 30px;
+        float: left;
+    }
+    img {
+        vertical-align: top;
+    }
+    .fdj {
+        width: 350px;
+        height: 350px;
+        border: 1px solid gray;
+        position: relative;
+    }
+    .big {
+        width: 450px;
+        height: 450px;
+        position: absolute;
+        top: 0;
+        left: 360px;
+        border: 1px solid #ccc;
+        overflow: hidden;
+        display: none;
+    }
+    .mask {
+        width: 100px;
+        height: 100px;
+        background: rgba(255, 255, 0, 0.4);
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: move;
+        display: none;
+    }
+    .small {
+        position: relative;
+    }
+    .big img {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .product{
+        width: 850px;
+        height: 500px;
+        margin-top: 50px;
+        margin-left: 400px;
+        position: relative;
+    }
+    .product .pro_name {
+        width: 100%;
+        height: 40px;
+        position: absolute;
+    }
+    .pro_name{
+        font: 700 16px Arial,"microsoft yahei";
+        color: #666;
+        padding-top: 10px;
+        line-height: 28px;
+        margin-bottom: 5px;
+    }
+    .pro_new{
+        width: 100%;
+        height: 200px;
+        margin-top: 30px;
+        top:30px;
+        position: absolute;
+    }
+    .pro_new p{
+        height: 18px;
+        line-height: 18px;
+        color: #660F2E;
+    }
+    .pro_new .goods{
+        width: 100%;
+        height: 200px;
+    }
+     .pro_new .goods .price{
+        width: 100%;
+        height: 80px;
+        line-height: 80px;
+        font-size: 30px;
+        padding-left: 10px;
+        font-family: simsun;
+        color: #999;
+    }
+    .goods .price span{
+        color:red;
+    }
+    .goods .price i{
+        font-family: microsoft yahei;
+        font-size: 20px;
+        font-style: normal;
+    }
+    .goods .price a{
+        text-decoration: none;
+        color: #0E588F;
+    }
+    .goods .price a:hover{
+        color: #7C220C;
+    }
+    .price .dd p{
+        font-size: 10px;
+    }
+    .price .dd {
+        position: relative;
+    }
+    .price .dd .cut{
+        width: 420px;
+        height: 80px;
+        top: 0;
+        padding: 5px;
+        left: 100px;
+        position: absolute;
+    }
+    .price .dd .cut p{
+        padding-left: 5px;
+    }
+    .price .dd .cut input{
+        margin-right: 5px;
+    }
+    .pro_wrap{
+        position: absolute;
+        width: 100%;
+        height: 240px;
+        bottom:0;
+    }

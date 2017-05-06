@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h2>以下数字能能通过加减乘数运算组合形成 24 </h2>
+</body>
+<script>
+    var x = 24;
+    for (var i = 1; i <= 9; i++) {
+        for (var j = 1; j <= i; j++) {
+            for (var k = 1; k<= j; k++) {
+                if (i + j + k == x) 
+                    {
+                        document.write(i,j,k,"<br>");
+                    } else if (i + j - k == x)
+                     {
+                        document.write(i,j,k,"<br>");
+                     }else if (i + j * k == x)
+                     {
+                        document.write(i,j,k,"<br>");
+                     }else if (i + j / k == x)
+                     {
+                        document.write(i,j,k,"<br>");
+                     }else if (i - j + k == x)
+                     {
+                        document.write(i,j,k,"<br>");
+                     }else if (i - j - k == x)
+                     {
+                        document.write(i,j,k,"<br>");
+                     }else if (i - j * k == x)
+                     {
+                        document.write(i,j,k,"<br>");
+                     }else if (i - j / k == x)
+                     {
+                        document.write(i,j,k,"<br>");
+                     }else if (i * j + k == x)
+                     {
+                        document.write(i,j,k,"<br>");
+                     }else if (i * j - k == x)
+                     {
+                        document.write(i,j,k,"<br>");
+                     }else if (i * j * k == x)
+                     {
+                        document.write(i,j,k,"<br>");
+                     }else if (i * j / k == x)
+                     {
+                        document.write(i,j,k,"<br>");
+                     }else if (i / j + k == x)
+                     {
+                        document.write(i,j,k,"<br>");
+                     }else if (i / j - k == x)
+                     {
+                        document.write(i,j,k,"<br>");
+                     }else if (i / j * k == x)
+                     {
+                        document.write(i,j,k,"<br>");
+                     }else if (i / j / k == x)
+                     {
+                        document.write(i,j,k,"<br>");
+                     }
+            }
+        }
+    }
+</script>
+</html>

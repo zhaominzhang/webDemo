@@ -1,0 +1,133 @@
+
+    .body{
+        width: 100%;
+        height: 100%;
+    }
+    .news_main{
+        width: 1250px;
+        height: 200px;
+        margin-left: 100px;
+        position: relative;
+    }
+    .main_title{
+        width: 90%;
+        height: 100px;
+        margin: 5px 20px;
+    }
+    .main_title h1{
+        font-size: 36px;
+        color: #333;
+        font-weight: bold;
+        line-height: 100px;
+    }
+    .main_blog{
+        width: 600px;
+        height: 100px;
+        margin-left: 20px;
+    }
+    .main_blog div{
+        margin:50px 10px;
+        float: left; 
+        cursor: pointer;
+    }
+    .sinablog,
+    .weixin{
+        width:78px;
+        height: 36px;
+        border-radius: 5px;
+    }
+    .sinablog{
+        background:url(../images/icon.jpg) no-repeat 0 0;
+    }
+    .weixin{
+        background:url(../images/icon.jpg) no-repeat -88px 0;
+    }
+    .qzone{
+        width: 100px;
+        height: 36px;
+        border-radius: 5px;
+        background:url(../images/icon.jpg) no-repeat -176px 0;
+    }
+    .add{
+        width: 36px;
+        height: 36px;
+        border-radius: 5px;
+        background:url(../images/icon1.jpg) no-repeat -152px 0;
+    }
+    .main_blog .words{
+        height: 36px;
+        line-height: 36px;
+        padding-left: 15px;
+        color: #ff8500;
+        font-size: 36px;
+        font-family: "Arial black";
+    }
+    .words i{
+        color: #555555;
+        height: 36px;
+        font-style: normal;
+        font-size: 14px;
+        font-family: "Microsoft YaHei";
+    }
+    .main_time{
+        width: 600px;
+        height: 100px;
+        bottom: 0;
+        right: 20px;
+        position: absolute;
+    }
+    .main_time p{
+        font-size: 30px;
+        height: 35px;
+        position: absolute;
+        right: 50px;
+        bottom: 10px;
+        line-height: 35px;
+    }
+    .content{
+        width: 800px;
+        margin: 10px 100px;
+        padding-top: 15px;
+    }
+    .content p{
+        padding:10px;
+        text-indent:2em;
+        font-size: 16px;
+        line-height: 2em;
+        margin: 15px 0;
+    }
+    .keywords{
+        width: 800px;
+        position: relative;
+    } 
+    .keywords label{
+        color: #ed5900;
+    }
+    .keywords h2{
+        line-height: 30px;
+        font-size: 14px;
+    }
+    .keywords h2 a{
+        text-decoration: none;
+        color: #000;
+    }
+    .keywords h2 a:hover{
+        color: #EE0B44;
+    }
+    .keywords span{
+        display: block;
+    }
+    .keywords span a{
+        text-decoration: none;
+        float: right;
+        margin-left: 10px;
+        width: 80px;
+        line-height: 30px;
+        font-size: 15px;
+        color: #000;
+        background: #f4f4f4;
+        border: 1px solid #d0d0d0;
+        border-radius: 2px;
+        text-align: center;
+    }
+

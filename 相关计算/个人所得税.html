@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>个人所得税计算</h1>
+            税前工资<input type="text" id="before" />
+            <button id="btn">计算</button><br/>
+            五险一金<input type="text" id="xian" /><br/>
+            个人所得税<input type="text" id="shui" /><br/>
+            税后工资<input type="text" id="after" /><br/>
+</body>
+<script>
+    var btn = document.getElementById('btn');
+    var before = document.getElementById('before');
+    var xian = document.getElementById('xian');
+    var shui = document.getElementById('shui');
+    var after = document.getElementById('after');
+    btn.onclick = function (){
+        xian.value = before.value * 0.175;
+        var shu = before.value - 3500;
+        if (shu <= 1500) 
+            {
+                shui.value = shu * 0.03 - 0;
+            }else if (shu <= 4500) 
+            {
+                shui.value = shu * 0.1 - 105;
+            }else if (shu <= 9000) 
+            {
+                shui.value = shu * 0.2 - 555;
+            } else if (shu <= 35000) 
+            {
+                shui.value = shu *0.25 - 1005;
+            }else if (shu <= 55000) 
+            {
+                shui.value = shu * 0.3 - 2755;
+            }else if (shu <= 80000) 
+            {
+                shui.value = shu * 0.35 - 5505;
+            }else if (shu > 80000) 
+            {
+                shui.value = shu * 0.45 - 13505;
+            }
+        after.value = before.value - xian.value - shui.value;
+        if (before.value == 0) 
+            {
+                xian.value = '';
+                shui.value = '';
+                after.value = '';
+                alert("请输入数字!");
+            }
+    }
+</script>
+</html>

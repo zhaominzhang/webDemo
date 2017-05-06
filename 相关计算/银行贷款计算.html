@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    input{
+        margin-top: 10px;
+    }
+    label{
+        font-size: 20px;
+        padding-right: 10px;
+    }
+
+    </style>
+</head>
+<body>
+    <h1>银行贷款计算</h1>
+            <label>贷款金额</label><input type="text" id="txtJine" /><br/>
+            <label>贷款年限</label><input type="text" id="txtYear" /><br/>
+            <label>还款方式</label>
+            <input type="radio" name="repaymentType"  checked="checked" id="radioRepaymentType1" value="0" />等额本金
+            <input type="radio" id="radioRepaymentType2"  name="repaymentType" value="1" />等额本息<br/>
+            <label>贷款年利率</label><input type="text" id="txtRate" />
+            <button id="btnGetResult">计算</button><br/>
+            <label>总利息</label><input type="text" id="txtSumRate" /><br/>
+            <label>每个月的本金+利息</label><br/>
+            <textarea id="txtRepaymentPerMon"  rows="10" cols="30" ></textarea><br/>
+</body>
+<script>
+    var btnGetResult = document.getElementById('btnGetResult');
+    btnGetResult.onclick = function(){  
+        
+        var totalMoney = document.getElementById('txtJine').value;
+        var year = document.getElementById('txtYear').value;
+        var yearRate = document.getElementById('txtRate').value;
+        var repaymentType1 = document.getElementById('radioRepaymentType1');
+        var txtSumRate = document.getElementById('txtSumRate');
+        var txtRepaymentPerMon= document.getElementById('txtRepaymentPerMon');
+        var monthRate = parseFloat(yearRate / 12); // 月利率
+        var monthCount = parseInt(year * 12); //  还款月数
+
+        if (isNaN(parseInt(totalMoney))){
+            alert("金额请输入正整数");
+            return;
+        }
+
+        if (repaymentType1.checked)
+            {
+              var capitalMoney =totalMoney/ monthCount; // 每月本金
+              var rateMoney = "";
+              var sumMoney = 0;  //还款总金额
+              for (var m=1;m<=monthCount;m++){
+                var temp =  capitalMoney+(totalMoney - capitalMoney*(m-1))*monthRate;
+                temp = Math.round(temp*100)/100;
+                sumMoney += temp;
+                rateMoney += "第"+m+"月还款金额为："+temp+"元\n";
+              }
+              txtRepaymentPerMon.value = rateMoney ; 
+              txtSumRate.value =  Math.round((sumMoney-totalMoney)*100)/100;
+            }  
+            else
+            {
+             // 每月还款额=[贷款本金×月利率×（1+月利率）^还款月数]÷[（1+月利率）^还款月数－1]
+             var temp = totalMoney*monthRate*Math.pow(1+monthRate,monthCount)/(Math.pow(1+monthRate,monthCount)-1)
+             txtRepaymentPerMon.value = temp;       
+             txtSumRate.value = Math.round((temp * monthCount - totalMoney)*100)/100;
+            }
+    }
+
+
+
+</script>
+</html>

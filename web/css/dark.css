@@ -1,5 +1,5 @@
 
-body{width: 100%;height: 100%;background-color: #eee;}
+body{width: 100%;height: 100%;background-color: #303030;}
 *{margin:0;padding:0;}
 ul li,ol li{list-style: none;}
 header{
@@ -37,7 +37,7 @@ header{
     height: 32px;
     text-align: center;
     line-height: 30px;
-    background-color: #c9c0ce;
+    background-color: #A2ECA6;
     position: absolute;
     float: right;
     right: 12px;
@@ -60,36 +60,42 @@ header{
     font-size: 18px;
     line-height: 35px;
     border: 1px solid #B5B5B5;
-    background-color: #ccc;
+    background-color: #FDFEEB;
+    font-family: simsun;
     cursor: pointer;
 }
 .login .login_right{
     color:#FFFFFF;
-    background-color: #21B3D1;
+    background-color: #990B72;
 }
 .login .login_left:hover{
     border-color:#FF6060;
 }
 .nav{
     width: 1350px;
+    font-family: simsun;
     height: 60px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 60px;
     display: flex;
-    background-color: #E1E1E1;
+    background-color: #303030;
 }
 .nav a{
     display: inline-block;
     height: 60px;
     text-align: center;
+    letter-spacing: 5px;
     text-decoration: none;
     flex:1;
 }
 .nav span{
-    color: black;
+    color: #1BEB1B;
     font-size: 15px;
     line-height: 60px;
 }
 .nav a:hover{
-    background-color: #6C6CFF;
+    background-color: #CECEFF;
 }
 .main{
     width: 1350px;
@@ -114,17 +120,23 @@ header{
 }
 .main span{
     display: block;
-    width: 80px;
-    height: 60px;
-    background-color: #eee;
+    width: 100px;
+    height: 80px;
+    border-radius: 50%;
+    font-family: simsun;
+    background-color: #7F7F7F;
     position: absolute;
-    opacity: 0.3;
+    opacity: 0.6;
     cursor: pointer;
+}
+.main span:hover{
+    color:red;
+    background-color: #83DA96;
 }
 .main .left,
 .main .right{
-    font-size: 30px;
-    line-height: 60px;
+    font-size: 50px;
+    line-height: 80px;
     text-align: center;
 }
 .main .left{
@@ -141,8 +153,8 @@ header{
 }
 .list div{
     flex:1;
-    background-color: #eee;
-    border:3px solid #eee;
+    border:3px solid #303030;
+    background-color: #303030;
     margin-left: -1px;
     height: 100%;
     position: relative;
@@ -166,13 +178,15 @@ header{
     background-color: #ccc;
 }
 .more .small a{
+    color: red;
     text-decoration: none;
+
 }
 .list .small h1{
     font-size: 1.5em;
     text-align: center;
     letter-spacing: 3px;
-    line-height: 40px;
+    line-height: 50px;
 }
 .list img{
     width: 100%;
@@ -190,10 +204,13 @@ header{
     text-align: center;
     font-size: 25px;
     font-weight: normal;
-    font-family: "宋体";
+    font-family: "微软雅黑";
+    letter-spacing: 2px;
+    color: #fff;
     padding-bottom: 10px;
 }
 .list span p{
+    color: #fff;
     letter-spacing: 2px;
 }
 .list span i{
@@ -202,6 +219,7 @@ header{
     display: block;
     position: absolute;
     bottom: 3px;
+    color: #fff;
     right:10px;
 }
 
@@ -214,10 +232,10 @@ footer{
     height: 260px;
     margin-top: 100px;
     text-align: center;
-    background-color: #ccc;
+    background-color: #303030;
 }
 .line{
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #AD3F87;
     padding: 23px 0 23px 0;
     margin-top: 30px;
 }
@@ -229,12 +247,13 @@ footer{
 .links a{
     padding:0 6px;
     text-decoration: none;
-    color: black;
+    color: #fff;
 }
 .links a:hover{
     color:red;
 }
 .copyright{
+    color: #fff;
     line-height:25px;
     margin-bottom: 10px;
 }

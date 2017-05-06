@@ -5,6 +5,19 @@
     <title>新闻详情</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/newson.css">
+    <script>
+        window.onload=function(){      
+            var box= document.getElementById('main_time');
+            var date = new Date();
+            var years= date.getFullYear();
+            var month = date.getMonth() + 1;
+            var today = date.getDate();
+            var hh = date.getHours() ;
+            var mm = date.getMinutes() ;
+            // console.log(years+"年"+month+"月"+today+"日");
+             box.innerHTML = years+"年"+month+"月"+today+"日"+hh+"时"+mm+"分";
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -80,19 +93,4 @@
         </div>
     </footer>
 </body>
-<script>
-window.onload=function(){
-
-
-    var box= document.getElementById('main_time');
-    var date = new Date();
-    var years= date.getFullYear();
-    var month = date.getMonth() + 1;
-    var today = date.getDate();
-    var hh = date.getHours() ;
-    var mm = date.getMinutes() ;
-    // console.log(years+"年"+month+"月"+today+"日");
-     box.innerHTML = years+"年"+month+"月"+today+"日"+hh+"时"+mm+"分";
-}
-</script>
 </html>

@@ -5,7 +5,40 @@
     <title>新闻</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/news.css">
-    
+    <script>
+    window.onload=function (){
+        var small = document.getElementById('small');
+        var prev = document.getElementById('prev');
+        var next = document.getElementById('next');
+        var divs = small.children;
+        // console.log(divs);
+        var ims = document.getElementById('ims');
+        var lis = ims.children[0].children;
+        // console.log(lis);
+        var spans = ims.getElementsByTagName('span');
+        // console.log(spans);
+
+        for (var i = 0; i < divs.length; i++) {
+            divs[i].index = i;
+            divs[i].onmouseover=function(){
+                for (var j = 0; j < lis.length; j++) {
+                    lis[j].style.display = "none";
+                }
+                lis[this.index].style.display = "block";
+            }
+        }
+        ims.onmouseover=function(){
+        for (var i = 0; i < spans.length; i++) {
+                spans[i].style.display = "block";
+            }
+        }
+        ims.onmouseout=function(){
+        for (var i = 0; i < spans.length; i++) {
+                spans[i].style.display = "none";
+            }
+        }     
+    }
+    </script>
 </head>
 <body>
     <header>
@@ -135,38 +168,5 @@
       </div>
     </footer>  
 </body>
-    <script>
-    window.onload=function (){
-        var small = document.getElementById('small');
-        var prev = document.getElementById('prev');
-        var next = document.getElementById('next');
-        var divs = small.children;
-        // console.log(divs);
-        var ims = document.getElementById('ims');
-        var lis = ims.children[0].children;
-        // console.log(lis);
-        var spans = ims.getElementsByTagName('span');
-        // console.log(spans);
 
-        for (var i = 0; i < divs.length; i++) {
-            divs[i].index = i;
-            divs[i].onmouseover=function(){
-                for (var j = 0; j < lis.length; j++) {
-                    lis[j].style.display = "none";
-                }
-                lis[this.index].style.display = "block";
-            }
-        }
-        ims.onmouseover=function(){
-        for (var i = 0; i < spans.length; i++) {
-                spans[i].style.display = "block";
-            }
-        }
-        ims.onmouseout=function(){
-        for (var i = 0; i < spans.length; i++) {
-                spans[i].style.display = "none";
-            }
-        }     
-    }
-    </script>
 </html>

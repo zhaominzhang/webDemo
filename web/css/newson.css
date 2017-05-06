@@ -120,6 +120,7 @@
     .keywords span a{
         text-decoration: none;
         float: right;
+        display: inline-block;
         margin-left: 10px;
         width: 80px;
         line-height: 30px;
@@ -129,5 +130,8 @@
         border: 1px solid #d0d0d0;
         border-radius: 2px;
         text-align: center;
+    }
+    .keywords span a:hover{
+        background-color: #76A437;
     }
 

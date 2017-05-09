@@ -5,11 +5,23 @@
   <title>Document</title>
   <link rel="stylesheet" href="css/list.css">
   <script src="js/jquery-1.11.3.min.js"></script>
+  <script>
+  $(document).ready(function() {
+       $('#list>ul>li').on('click',function(){
+            $(this).children('ul').stop().slideDown().end().css({
+            'height':'300px',
+            'display':'block'
+            });//滑动开关
+        }).on('mouseleave',function(){
+          $(this).children('ul').hide(1000).end().animate({'height':'40px'},1000);
+        })    
+  });
+</script>
 </head>
 <body>
   <header>
     <div class="header">
-      <span class="left"><p>金枢科技管理平台1.0.1</p>
+      <span class="left"><p>XX科技管理平台1.0.1</p>
       </span> 
       <span class="right">
         <input type="text" name="搜索">
@@ -295,17 +307,5 @@
     </div>
   </aside>
 </body>
-<script>
-  $(document).ready(function() {
-       $('#list>ul>li').on('click',function(){
-            $(this).children('ul').stop().slideDown().end().css({
-            'height':'300px',
-            'display':'block'
-            });//滑动开关
-        }).on('mouseleave',function(){
-          $(this).children('ul').hide(1000).end().animate({'height':'40px'},1000);
-        })
-      
-  });
-</script>
+
 </html>

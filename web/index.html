@@ -6,98 +6,97 @@
     <link rel="stylesheet" href="css/index.css">
     <script src="js/jquery-1.11.3.min.js"></script>
     <script>
- window.onload=function(){
-
-    var main = document.getElementById('main');
-    var uls = document.getElementById('scroll');
-    var ullis =uls.children;
-    var spans =main.getElementsByTagName('span'); 
-    var left = document.getElementById('left');
-    var right = document.getElementById('right');
-    main.onmouseover=function(){
-        for (var i = 0; i < spans.length; i++) {
-            spans[i].style.display = "block";
+    window.onload=function(){
+       var main = document.getElementById('main');
+       var uls = document.getElementById('scroll');
+       var ullis =uls.children;
+       var spans =main.getElementsByTagName('span'); 
+       var left = document.getElementById('left');
+       var right = document.getElementById('right');
+       main.onmouseover=function(){
+           for (var i = 0; i < spans.length; i++) {
+               spans[i].style.display = "block";
+           }
         }
-    }
-    main.onmouseout=function(){
-        for (var i = 0; i < spans.length; i++) {
-            spans[i].style.display = "none";
-        }
-    }
-    left.onclick=function(){
-        target += 1350;
-    }
-    right.onclick=function(){
-        target -= 1350;
-    }
-    var leader=0;
-    var target=0;
-    var timer=null;
-    timer=setInterval(autoPlay,30)
-    function autoPlay(){
-        if (target > 0) 
-        {
-            target = -2700;
-        } else if(target < -2700)
-        {
-            target = 0;
-        }
-        leader=leader+(target - leader) / 10;        
-        uls.style.left=leader+"px";
-    }
-
-    // 产品列表
-     var list = document.getElementById('list');
-     var divs = list.children;
-     var divSon = document.getElementsByClassName('more');
-     // console.log(divSon);
-        for (var i = 0; i < divs.length; i++) {
-            divs[i].index = i;
-            divs[i].onmouseover = function(){            
-                for (var j = 0; j < divSon.length; j++) {
-                
-                    divSon[this.index].style.display = "block";
-                }
-            
-            } 
-            divs[i].onmouseout = function(){            
-                for (var j = 0; j < divSon.length; j++) {
-                
-                    divSon[this.index].style.display = "none";
-                }           
-            }  
-        }
-        // 切换主题
-        // console.log($('#change'));
-        $(function(){
-            function addDarkTheme() {
-                var link = document.createElement('link');
-                link.type = 'text/css';
-                link.id = "theme-css-dark";  // 加上id方便查找
-                link.rel = 'stylesheet';
-                link.href = 'css/dark.css';
-                document.getElementsByTagName("head")[0].appendChild(link);
+       main.onmouseout=function(){
+           for (var i = 0; i < spans.length; i++) {
+               spans[i].style.display = "none";
             }
-            // 删除暗色主题
-            function removeDarkTheme() {
-                $('#theme-css-dark').remove();
+        }
+        left.onclick=function(){
+           target += 1350;
+        }
+        right.onclick=function(){
+           target -= 1350;
+        }
+        var leader=0;
+        var target=0;
+        var timer=null;
+        timer=setInterval(autoPlay,30)
+        function autoPlay(){
+           if (target > 0) 
+            {
+               target = -2700;
+            } else if(target < -2700)
+            {
+               target = 0;
             }
-            function useDarkTheme(useDark) {
-                if (useDark) {
-                    addDarkTheme();
-                } else {
-                    removeDarkTheme();
-                }
-            }
-            $('#change').on('click',function(){
-                
-
-
-                   useDarkTheme(true); 
-            
-            })
-        });
+            leader=leader+(target - leader) / 10;        
+            uls.style.left=leader+"px";
+        }
+        // 产品列表
+        var list = document.getElementById('list');
+        var divs = list.children;
+        var divSon = document.getElementsByClassName('more');
+        // console.log(divSon);
+           for (var i = 0; i < divs.length; i++) {
+               divs[i].index = i;
+               divs[i].onmouseover = function(){            
+                   for (var j = 0; j < divSon.length; j++) {
+                   
+                       divSon[this.index].style.display = "block";
+                   }
+               
+               } 
+               divs[i].onmouseout = function(){            
+                   for (var j = 0; j < divSon.length; j++) {
+                   
+                       divSon[this.index].style.display = "none";
+                   }           
+               }  
+           }       
    }
+    </script>
+    <script>
+            // 切换主题
+            // console.log($('#change'));
+    
+    $(document).ready(function() {
+        function addDarkTheme() {
+            var link = document.createElement('link');
+            link.type = 'text/css';
+            link.id = "theme-css-dark";  // 加上id方便查找
+            link.rel = 'stylesheet';
+            link.href = 'css/dark.css';
+            document.getElementsByTagName("head")[0].appendChild(link);
+        }
+        // 删除暗色主题
+        function removeDarkTheme() {
+            $('#theme-css-dark').remove();
+        }
+        function useDarkTheme(useDark) {
+            if (useDark) {
+                addDarkTheme();
+            } else {
+                removeDarkTheme();
+            }
+        }
+        $('#change').on('click',function(){
+            
+               useDarkTheme(true); 
+        
+        })
+    });
     </script>
 </head>
 <body>
